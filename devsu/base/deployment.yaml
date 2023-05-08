@@ -1,0 +1,31 @@
+#*******************************************************************************
+# Description: This script is used to deploy the application on kubernetes cluster
+#*******************************************************************************
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: demo-devsu-app
+spec:
+   selector:
+     matchLabels:
+       app: demo-devsu-app
+   replicas: 1
+   template:
+      metadata:
+         labels:
+             app: demo-devsu-app
+      spec:
+        containers:
+        - name: demo-devsu-app
+          image: app-demo-devsu:1.0
+          resources:
+             requests:
+                cpu: 600m
+                memory: 1G
+             limits:
+                cpu: 610m
+                memory: 1G
+          ports:
+            - containerPort: 8080
+              name: app
+        
