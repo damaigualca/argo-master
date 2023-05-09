@@ -16,7 +16,7 @@ spec:
              app: demo-devsu-app
       spec:
         containers:
-        - name: demo-devsu-app
+        - name: test
           image: bcirg3citperuacr002.azurecr.io/t24ng/test:1
           resources:
              requests:
