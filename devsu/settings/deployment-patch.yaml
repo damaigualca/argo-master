@@ -17,7 +17,7 @@ spec:
       spec:
         containers:
         - name: test
-          image: bcirg3citperuacr002.azurecr.io/t24ng/test:1
+          image: bcirg3citperuacr002.azurecr.io/t24ng/t24-app-r21:R21.623
           resources:
              requests:
                 cpu: 600m
