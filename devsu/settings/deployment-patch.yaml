@@ -28,4 +28,7 @@ spec:
           ports:
             - containerPort: 8080
               name: app
+        imagePullSecrets:
+           - name: acr-password
+
         
